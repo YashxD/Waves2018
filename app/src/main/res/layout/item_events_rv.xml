@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="30dp"
+    android:padding="20dp"
     android:id="@+id/events_rv_item_linearlayout"
     android:background="@drawable/rv_item_back"
-    android:layout_margin="10dp">
+    android:layout_margin="2dp">
 
     <ImageView
         android:id="@+id/events_rv_item_imageview"

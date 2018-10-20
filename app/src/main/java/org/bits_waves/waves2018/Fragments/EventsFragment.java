@@ -76,7 +76,7 @@ public class EventsFragment extends Fragment {
         mViewPager = (ViewPager) view.findViewById(R.id.viewpager_events_fragment);
         TextView textView = (TextView) view.findViewById(R.id.textview_events);
         AccessJSON accessJSON = new AccessJSON();
-        JSONArray jsonArray = accessJSON.readEventJSONArray(getContext());
+        //JSONArray jsonArray = accessJSON.readEventJSONArray(getContext());
         return view;
         //return super.onCreateView(inflater, container, savedInstanceState);
     }

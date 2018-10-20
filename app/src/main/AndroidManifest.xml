@@ -17,8 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.EventsView" />
-        <activity android:name=".Activities.Events"></activity>
-        <activity android:name=".Activities.EventView"></activity>
+        <activity android:name=".Activities.Events" />
+        <activity android:name=".Activities.EventView" />
+        <activity android:name=".Activities.OurTeamActivity"></activity>
     </application>
 
 </manifest>

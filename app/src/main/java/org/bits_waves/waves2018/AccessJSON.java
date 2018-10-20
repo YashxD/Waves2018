@@ -30,10 +30,7 @@ public class AccessJSON {
             event.setDescription(jsonObject.getString("description"));
             event.setName(jsonObject.getString("name"));
             event.setRules(jsonObject.getString("rules"));
-            event.setImgRes(jsonObject.getString("imgres1"),
-                    jsonObject.getString("imgres2"),
-                    jsonObject.getString("imgres3"));
-
+            event.setImgRes(jsonObject.getString("imgres"));
         } catch (IOException ex) {
             ex.printStackTrace();
         } catch (JSONException e) {
@@ -42,9 +39,10 @@ public class AccessJSON {
         return event;
     }
 
-    public JSONArray readEventJSONArray(Context context) {
+    public List<Event> readEventJSONArray(Context context) {
         String jsonString = null;
         Event event = new Event();
+        List<Event> eventList = new ArrayList<>(0);
         JSONArray jsonArray = new JSONArray();
         try{
             InputStream is = context.getAssets().open("test.json");
@@ -54,13 +52,16 @@ public class AccessJSON {
             is.close();
             jsonString = new String(buffer, "UTF-8");
             jsonArray = new JSONArray(jsonString);
+            while(!jsonArray.isNull(0)){
+
+            }
 
         } catch (IOException ex) {
             ex.printStackTrace();
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return jsonArray;
+        return eventList;
     }
 
     public List<Event> readEventFromJSON(Context context) {

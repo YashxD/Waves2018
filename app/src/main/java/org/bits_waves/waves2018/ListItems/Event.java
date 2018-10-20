@@ -2,29 +2,18 @@ package org.bits_waves.waves2018.ListItems;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.annotation.NonNull;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
 
 public class Event implements Parcelable{
     private String name;
     private String description;
     private String rules;
-    private List<String> imgRes;
+    private String imgRes;
 
     public Event() {
         this.name =  "Def";
         this.description = "Def";
         this.rules = "Def";
-        this.imgRes = new ArrayList<>(0);
-        while(imgRes.size()<4){
-            this.imgRes.add("Def");
-        }
-        this.imgRes.add("Def");
+        this.imgRes = "Def";
     }
 
     public Event(Event event){
@@ -39,10 +28,7 @@ public class Event implements Parcelable{
         this.name = in.readString();
         this.description = in.readString();
         this.rules = in.readString();
-        this.imgRes = new ArrayList<>(3);
-        this.imgRes.add(in.readString());
-        this.imgRes.add(in.readString());
-        this.imgRes.add(in.readString());
+        this.imgRes = in.readString();
     }
 
     @Override
@@ -56,9 +42,7 @@ public class Event implements Parcelable{
         parcel.writeString(name);
         parcel.writeString(description);
         parcel.writeString(rules);
-        parcel.writeString(imgRes.get(0));
-        parcel.writeString(imgRes.get(1));
-        parcel.writeString(imgRes.get(2));
+        parcel.writeString(imgRes);
     }
 
     //Necessary creator to implement Parcelable
@@ -76,7 +60,7 @@ public class Event implements Parcelable{
         return description;
     }
 
-    public List<String> getImgRes() {
+    public String getImgRes() {
         return imgRes;
     }
 
@@ -92,11 +76,8 @@ public class Event implements Parcelable{
         this.description = description;
     }
 
-    public void setImgRes(String imgRes1, String imgRes2, String imgRes3) {
-        this.imgRes.clear();
-        this.imgRes.add(imgRes1);
-        this.imgRes.add(imgRes2);
-        this.imgRes.add(imgRes3);
+    public void setImgRes(String imgRes) {
+        this.imgRes = imgRes;
     }
 
     public void setName(String name) {

@@ -35,6 +35,17 @@
     <string name="event_6">Skime</string>
     <string name="event_7">Indian Rock</string>
 
+    <string name="head_dev">Head Developer</string>
+    <string name="dev">Developer</string>
+    <string name="graphic_designer">Graphic Designer</string>
+    <string name="op_head">Operations Head</string>
+
+    <string name="yash_j">Yash Jain</string>
+    <string name="aryan_a">Aryan Agarwal</string>
+    <string name="sai_b">Sai Bhardwaj</string>
+    <string name="parambir_s">Parambir Singh</string>
+    <string name="dhananjay_m">Dhanajay Mehendale</string>
+
     <string-array name="events_array">
         <item>Spin Off</item>
         <item>Natyanjali</item>
