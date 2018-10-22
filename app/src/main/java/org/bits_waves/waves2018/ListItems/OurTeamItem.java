@@ -8,17 +8,15 @@ public class OurTeamItem {
     private String info;
     private String call;
     private String mail;
-    private String imgRes;
     private int imgResInt;
 
-    public OurTeamItem(String name, String position, String info, String call, String mail, String imgRes, Context context) {
+    public OurTeamItem(String name, String position, String info, String call, String mail, int imgResInt, Context context) {
         this.name = name;
         this.position = position;
         this.info = info;
         this.call = call;
         this.mail = mail;
-        this.imgRes = imgRes;
-        this.imgResInt = context.getResources().getIdentifier(imgRes,"drawable",context.getPackageName());
+        this.imgResInt = imgResInt;
     }
 
     public OurTeamItem(OurTeamItem ourTeamItem) {
@@ -27,7 +25,6 @@ public class OurTeamItem {
         this.info = ourTeamItem.info;
         this.call = ourTeamItem.call;
         this.mail = ourTeamItem.mail;
-        this.imgRes = ourTeamItem.imgRes;
         this.imgResInt = ourTeamItem.imgResInt;
     }
 
@@ -77,13 +74,5 @@ public class OurTeamItem {
 
     public void setMail(String mail) {
         this.mail = mail;
-    }
-
-    public String getImgRes() {
-        return imgRes;
-    }
-
-    public void setImgRes(String imgRes) {
-        this.imgRes = imgRes;
     }
 }
