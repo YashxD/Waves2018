@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import org.bits_waves.waves2018.ListItems.WinnersItem;
 import org.bits_waves.waves2018.R;
@@ -16,6 +17,10 @@ import java.util.List;
 public class WinnersAdapter extends RecyclerView.Adapter<WinnersViewHolder> {
 
     List<WinnersItem> winnersItems = new ArrayList<>(0);
+
+    public WinnersAdapter(List<WinnersItem> winnersItems) {
+        this.winnersItems = winnersItems;
+    }
 
     @NonNull
     @Override

@@ -19,6 +19,7 @@ public class OurTeamActivity extends AppCompatActivity {
 
     private void fillData(){
         //Enter data inside ourTeam.
+        ourTeam.add(new OurTeamItem("Yash Jain", "", "yashxd.github.io", "+91-8130297010","yashjain.1999@gmail.com" , R.drawable.ourteam_yash));
     }
 
     @Override

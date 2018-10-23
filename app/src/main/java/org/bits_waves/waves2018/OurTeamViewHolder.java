@@ -13,9 +13,9 @@ public class OurTeamViewHolder extends RecyclerView.ViewHolder{
     private ImageView imageView1, imageView2;
     private TextView name1, name2;
     private TextView position1, position2;
-    private ImageButton info1, info2;
-    private ImageButton call1, call2;
-    private ImageButton mail1, mail2;
+    public ImageButton info1, info2;
+    public ImageButton call1, call2;
+    public ImageButton mail1, mail2;
 
     public OurTeamViewHolder(View itemView) {
         super(itemView);

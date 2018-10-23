@@ -10,7 +10,7 @@ public class OurTeamItem {
     private String mail;
     private int imgResInt;
 
-    public OurTeamItem(String name, String position, String info, String call, String mail, int imgResInt, Context context) {
+    public OurTeamItem(String name, String position, String info, String call, String mail, int imgResInt) {
         this.name = name;
         this.position = position;
         this.info = info;

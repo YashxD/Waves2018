@@ -69,7 +69,6 @@ public class SpotOnFragment extends Fragment {
                 //Add the item to the starting of the data list
                 spotOnItems.add(0,spotOnItem);
                 spotOnAdapter.notifyDataSetChanged();
-                //notifyAll();
             }
 
             @Override
