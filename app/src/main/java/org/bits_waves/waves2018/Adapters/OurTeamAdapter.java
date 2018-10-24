@@ -93,6 +93,6 @@ public class OurTeamAdapter extends RecyclerView.Adapter<OurTeamViewHolder> {
 
     @Override
     public int getItemCount() {
-        return ourTeamItems.size();
+        return ourTeamItems.size()/2;
     }
 }

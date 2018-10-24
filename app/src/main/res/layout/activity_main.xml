@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Activities.MainActivity">
-
     <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        tools:context=".Activities.MainActivity"
         android:orientation="vertical">
 
         <android.support.v7.widget.Toolbar
@@ -18,33 +14,56 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
             android:background="#000000"
-            android:textAlignment="center"
-            app:titleTextColor="@android:color/white"
-            app:subtitleTextColor="@android:color/white"
+            android:elevation="0dp"
+            android:gravity="center_horizontal"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
-            android:gravity="center"
-            android:layout_gravity="center_horizontal">
+            android:padding="5dp">
 
-            <ImageView
-                android:id="@+id/main_activity_appbar_imageview"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="#00000000"
-                android:src="@drawable/waves_logo_top"
-                android:visibility="visible" />
-            <TextView
-                android:id="@+id/main_activity_appbar_textview"
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="gone"
-                android:textAlignment="center"
-                android:text="Waves2018"
-                android:textSize="25sp"
-                android:textColor="@android:color/white"/>
+                android:orientation="horizontal">
 
-            </android.support.v7.widget.Toolbar>
+                <ImageButton
+                    android:id="@+id/main_activity_appbar_csr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:src="@drawable/ic_fire"/>
+
+                <ImageView
+                    android:id="@+id/main_activity_appbar_imageview"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:background="#00000000"
+                    android:src="@drawable/waves_logo_top"
+                    android:visibility="visible"
+                    android:layout_weight="8"/>
+
+                <TextView
+                    android:id="@+id/main_activity_appbar_textview"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Waves2018"
+                    android:textAlignment="center"
+                    android:textSize="25sp"
+                    android:visibility="gone"
+                    android:textColor="@android:color/white"
+                    android:layout_weight="8"/>
+
+                <ImageButton
+                    android:id="@+id/main_activity_appbar_ourteam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:src="@drawable/ic_fire"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
 
         <FrameLayout
             android:id="@+id/main_activity_frame_layout"
@@ -71,4 +90,3 @@
             app:menu="@menu/bottom_navigation_items"/>
 
     </LinearLayout>
-</RelativeLayout>

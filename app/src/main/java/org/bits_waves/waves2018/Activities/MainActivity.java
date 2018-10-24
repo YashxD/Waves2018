@@ -1,5 +1,7 @@
 package org.bits_waves.waves2018.Activities;
 
+import android.content.Intent;
+import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -9,6 +11,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements EventsFragment.Up
     BottomNavigationView bottomNav;
     ImageView appbarImageview;
     TextView appbarTextView;
+    ImageButton csrImageButton, ourTeamImageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +49,16 @@ public class MainActivity extends AppCompatActivity implements EventsFragment.Up
         appbarImageview = (ImageView) findViewById(R.id.main_activity_appbar_imageview);
         appbarTextView = (TextView) findViewById(R.id.main_activity_appbar_textview);
         secondaryFrameLayout = (FrameLayout) findViewById(R.id.main_activity_secondary_frame_layout);
+        csrImageButton = (ImageButton) findViewById(R.id.main_activity_appbar_csr);
+        ourTeamImageButton = (ImageButton) findViewById(R.id.main_activity_appbar_ourteam);
 
-
+        ourTeamImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, OurTeamActivity.class);
+                startActivity(intent);
+            }
+        });
 
         bottomNav.setSelectedItemId(R.id.bottom_nav_home);
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

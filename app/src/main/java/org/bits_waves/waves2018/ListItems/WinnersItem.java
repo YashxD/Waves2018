@@ -14,6 +14,11 @@ public class WinnersItem {
         this.data = data;
     }
 
+    public WinnersItem(){
+        this.eventName = "Def";
+        this.data = "Def";
+    }
+
     public String getEventName() {
         return eventName;
     }

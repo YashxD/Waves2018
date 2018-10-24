@@ -5,7 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.OurTeamActivity">
+    tools:context=".Activities.OurTeamActivity"
+    android:orientation="vertical"
+    android:background="@drawable/back">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="App Team"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        android:layout_margin="30dp"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/our_team_rv"
