@@ -24,10 +24,27 @@
             app:subtitleTextColor="@android:color/white"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
-            app:title="Waves"
-            android:gravity="center_horizontal"
-            app:subtitle="Embrace the Shadows"
-            />
+            android:gravity="center"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/main_activity_appbar_imageview"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#00000000"
+                android:src="@drawable/waves_logo_top"
+                android:visibility="visible" />
+            <TextView
+                android:id="@+id/main_activity_appbar_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:text="Waves2018"
+                android:textSize="25sp"
+                android:textColor="@android:color/white"/>
+
+            </android.support.v7.widget.Toolbar>
 
         <FrameLayout
             android:id="@+id/main_activity_frame_layout"
